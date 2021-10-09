@@ -46,8 +46,7 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
         return status[1]
     elif 30 <= percentage < 60:
         return status[2]
-    else:
-        return status[3]
+    return status[3]
 
 
 def fail_safe(temperature, neutrons_produced_per_second, threshold):
@@ -69,5 +68,4 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
         return status[1]
     elif criticality < 0.9 * threshold:
         return status[0]
-    else:
-        return status[2]
+    return status[2]
