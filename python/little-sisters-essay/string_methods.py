@@ -1,3 +1,6 @@
+"""Little Sister's Essay Challenge: String Method """
+
+
 def capitalize_title(title: str):
     """
 
@@ -5,7 +8,7 @@ def capitalize_title(title: str):
     :return:  str title string in title case (first letters capitalized)
     """
 
-    return " ".join(word.capitalize() for word in title.split())
+    return title.title()
 
 
 def check_sentence_ending(sentence: str):
@@ -14,7 +17,7 @@ def check_sentence_ending(sentence: str):
     :param sentence: str a sentence to check.
     :return:  bool True if punctuated correctly with period, False otherwise.
     """
-    return True if sentence[-1] == '.' else False
+    return sentence[-1] == '.'
 
 
 def clean_up_spacing(sentence: str):
@@ -36,4 +39,4 @@ def replace_word_choice(sentence: str, old_word: str, new_word: str):
     :return:  str input sentence with new words in place of old words
     """
 
-    return sentence.replace(f"{old_word}", f"{new_word}")
+    return sentence.replace(old_word, new_word)
